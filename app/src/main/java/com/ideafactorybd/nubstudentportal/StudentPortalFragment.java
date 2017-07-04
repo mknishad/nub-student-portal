@@ -18,7 +18,7 @@ import android.widget.ProgressBar;
 public class StudentPortalFragment extends Fragment {
 
     View view;
-    WebView studentPortalWebview;
+    static WebView studentPortalWebview;
     ProgressBar pbLoadStudentPortal;
 
     @Override
@@ -65,5 +65,13 @@ public class StudentPortalFragment extends Fragment {
         public void onPageFinished(WebView view, String url) {
             pbLoadStudentPortal.setVisibility(View.INVISIBLE);
         }
+    }
+
+    public static boolean canGoBack(){
+        return studentPortalWebview.canGoBack();
+    }
+
+    public static void goBack(){
+        studentPortalWebview.goBack();
     }
 }

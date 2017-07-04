@@ -12,6 +12,12 @@ import android.view.MenuItem;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    StudentPortalFragment studentPortalFragment;
+    NUBWebsiteFragment nubWebsiteFragment;
+    HelpFragment helpFragment;
+    AboutFragment aboutFragment;
+    private int fragmentNumber = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +46,24 @@ public class MainActivity extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            switch (fragmentNumber) {
+                case 1:
+                    if (StudentPortalFragment.canGoBack()) {
+                        StudentPortalFragment.goBack();
+                    } else {
+                        super.onBackPressed();
+                    }
+                    break;
+                case 2:
+                    if (NUBWebsiteFragment.canGoBack()) {
+                        NUBWebsiteFragment.goBack();
+                    } else {
+                        super.onBackPressed();
+                    }
+                    break;
+                default:
+                    super.onBackPressed();
+            }
         }
     }
 
@@ -73,19 +96,23 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_student_portal) {
-            StudentPortalFragment studentPortalFragment = new StudentPortalFragment();
+            fragmentNumber = 1;
+            studentPortalFragment = new StudentPortalFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.main_content,studentPortalFragment,
                     studentPortalFragment.getTag()).commit();
         } else if (id == R.id.nav_nub_website) {
-            NUBWebsiteFragment nubWebsiteFragment= new NUBWebsiteFragment();
+            fragmentNumber = 2;
+            nubWebsiteFragment= new NUBWebsiteFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.main_content,nubWebsiteFragment,
                     nubWebsiteFragment.getTag()).commit();
         } else if (id == R.id.nav_help) {
-            HelpFragment helpFragment= new HelpFragment();
+            fragmentNumber = 3;
+            helpFragment= new HelpFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.main_content,helpFragment,
                     helpFragment.getTag()).commit();
         } else if (id == R.id.nav_about) {
-            AboutFragment aboutFragment= new AboutFragment();
+            fragmentNumber = 4;
+            aboutFragment= new AboutFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.main_content,aboutFragment,
                     aboutFragment.getTag()).commit();
         }

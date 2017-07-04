@@ -18,7 +18,7 @@ import android.widget.ProgressBar;
 public class NUBWebsiteFragment extends Fragment {
 
     View view;
-    WebView nubWebsiteWebview;
+    static WebView nubWebsiteWebview;
     ProgressBar pbLoadNUBWebsite;
 
     @Override
@@ -67,5 +67,13 @@ public class NUBWebsiteFragment extends Fragment {
         public void onPageFinished(WebView view, String url) {
             pbLoadNUBWebsite.setVisibility(View.INVISIBLE);
         }
+    }
+
+    public static boolean canGoBack(){
+        return nubWebsiteWebview.canGoBack();
+    }
+
+    public static void goBack(){
+        nubWebsiteWebview.goBack();
     }
 }
