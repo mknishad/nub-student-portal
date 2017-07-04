@@ -28,6 +28,10 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        // Load about fragment on startup
+        StudentPortalFragment studentPortalFragment = new StudentPortalFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.main_content,studentPortalFragment,studentPortalFragment.getTag()).commit();
     }
 
     @Override
@@ -69,13 +73,17 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_student_portal) {
-
+            StudentPortalFragment studentPortalFragment = new StudentPortalFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.main_content,studentPortalFragment,studentPortalFragment.getTag()).commit();
         } else if (id == R.id.nav_nub_website) {
-
+            NUBWebsiteFragment nubWebsiteFragment= new NUBWebsiteFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.main_content,nubWebsiteFragment,nubWebsiteFragment.getTag()).commit();
         } else if (id == R.id.nav_help) {
-
+            HelpFragment helpFragment= new HelpFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.main_content,helpFragment,helpFragment.getTag()).commit();
         } else if (id == R.id.nav_about) {
-
+            AboutFragment aboutFragment= new AboutFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.main_content,aboutFragment,aboutFragment.getTag()).commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
