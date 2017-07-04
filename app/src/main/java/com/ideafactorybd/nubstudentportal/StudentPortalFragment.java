@@ -12,12 +12,14 @@ import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ProgressBar;
 
 
 public class StudentPortalFragment extends Fragment {
 
     View view;
     WebView studentPortalWebview;
+    ProgressBar pbLoadStudentPortal;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,7 @@ public class StudentPortalFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
 
         studentPortalWebview = (WebView) view.findViewById(R.id.webview_student_portal);
+        pbLoadStudentPortal = (ProgressBar) view.findViewById(R.id.pb_load_student_portal);
         WebSettings webSettings = studentPortalWebview.getSettings();
         studentPortalWebview.loadUrl("http://182.160.97.196:8088/studentportal/");
         webSettings.setJavaScriptEnabled(true);
@@ -56,6 +59,11 @@ public class StudentPortalFragment extends Fragment {
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
             startActivity(intent);
             return true;
+        }
+
+        @Override
+        public void onPageFinished(WebView view, String url) {
+            pbLoadStudentPortal.setVisibility(View.INVISIBLE);
         }
     }
 }
