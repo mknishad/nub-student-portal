@@ -39,6 +39,8 @@ public class StudentPortalFragment extends Fragment {
         WebSettings webSettings = studentPortalWebview.getSettings();
         studentPortalWebview.loadUrl("http://182.160.97.196:8088/studentportal/");
         webSettings.setJavaScriptEnabled(true);
+        webSettings.setBuiltInZoomControls(true);
+        webSettings.setDisplayZoomControls(false);
         studentPortalWebview.setWebViewClient(new MyWebViewClient());
     }
 
