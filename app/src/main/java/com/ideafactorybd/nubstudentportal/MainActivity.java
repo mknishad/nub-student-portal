@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity
         // Load about fragment on startup
         StudentPortalFragment studentPortalFragment = new StudentPortalFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.main_content,studentPortalFragment,studentPortalFragment.getTag()).commit();
+        setTitle("Student Portal");
     }
 
     @Override
@@ -100,21 +101,25 @@ public class MainActivity extends AppCompatActivity
             studentPortalFragment = new StudentPortalFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.main_content,studentPortalFragment,
                     studentPortalFragment.getTag()).commit();
+            setTitle("Student Portal");
         } else if (id == R.id.nav_nub_website) {
             fragmentNumber = 2;
             nubWebsiteFragment= new NUBWebsiteFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.main_content,nubWebsiteFragment,
                     nubWebsiteFragment.getTag()).commit();
+            setTitle("NUB Website");
         } else if (id == R.id.nav_help) {
             fragmentNumber = 3;
             helpFragment= new HelpFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.main_content,helpFragment,
                     helpFragment.getTag()).commit();
+            setTitle("Help");
         } else if (id == R.id.nav_about) {
             fragmentNumber = 4;
             aboutFragment= new AboutFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.main_content,aboutFragment,
                     aboutFragment.getTag()).commit();
+            setTitle("About");
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
