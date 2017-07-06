@@ -8,4 +8,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="ad_unit_nub">ca-app-pub-3318512953586134/4284803805</string>
+    <string name="ad_unit_test">ca-app-pub-3940256099942544/6300978111</string>
 </resources>

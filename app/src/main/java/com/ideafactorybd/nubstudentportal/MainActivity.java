@@ -9,6 +9,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -17,6 +20,7 @@ public class MainActivity extends AppCompatActivity
     HelpFragment helpFragment;
     AboutFragment aboutFragment;
     private int fragmentNumber = 1;
+    AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +43,11 @@ public class MainActivity extends AppCompatActivity
         StudentPortalFragment studentPortalFragment = new StudentPortalFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.main_content,studentPortalFragment,studentPortalFragment.getTag()).commit();
         setTitle("Student Portal");
+
+        mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder()
+                .build();
+        mAdView.loadAd(adRequest);
     }
 
     @Override
