@@ -11,4 +11,12 @@
 
     <string name="ad_unit_nub">ca-app-pub-3318512953586134/4284803805</string>
     <string name="ad_unit_test">ca-app-pub-3940256099942544/6300978111</string>
+
+    <string name="how_to_login">How to login?</string>
+    <string name="step1">1. Open NUB Student Portal</string>
+    <string name="step2">2. Enter ID with department code as username (e.g. 04120300713)</string>
+    <string name="step3">3. Enter password (default: 123456)</string>
+    <string name="step4">4. Login</string>
+    <string name="dept_code">Department codes:</string>
+    <string name="depts">BBA - 01\nRMBA - 02\nEMBA/MBA - 03\nCSE - 04\nBPA - 05\nELL - 06\nLLB - 07\nMAE - 08\nLLM - 12\nECSE - 21\nBBBA - 26\nBMBA - 27\nBLLB - 28\nEEE - 29\nBTX - 30\nMPH - 31\nEEEE - 32\nEBTX - 33\nBELL - 35</string>
 </resources>
