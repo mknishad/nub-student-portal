@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_alignParentBottom="true"
-        android:text="Developed by: IdeaFactory Ltd."
+        android:text="Developed by: Idea Factory Ltd."
         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
 </RelativeLayout>
