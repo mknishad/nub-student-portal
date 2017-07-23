@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -43,6 +44,8 @@ public class MainActivity extends AppCompatActivity
         StudentPortalFragment studentPortalFragment = new StudentPortalFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.main_content,studentPortalFragment,studentPortalFragment.getTag()).commit();
         setTitle("Student Portal");
+
+        Toast.makeText(this, "Please go to Help section to know about login info", Toast.LENGTH_LONG).show();
 
         mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder()
@@ -111,6 +114,7 @@ public class MainActivity extends AppCompatActivity
             getSupportFragmentManager().beginTransaction().replace(R.id.main_content,studentPortalFragment,
                     studentPortalFragment.getTag()).commit();
             setTitle("Student Portal");
+            Toast.makeText(this, "Please go to Help section to know about login info", Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_nub_website) {
             fragmentNumber = 2;
             nubWebsiteFragment= new NUBWebsiteFragment();
