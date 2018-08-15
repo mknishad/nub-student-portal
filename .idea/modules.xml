@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/NUBStudentPortal.iml" filepath="$PROJECT_DIR$/NUBStudentPortal.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/nub-student-portal.iml" filepath="$PROJECT_DIR$/nub-student-portal.iml" />
     </modules>
