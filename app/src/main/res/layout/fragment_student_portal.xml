@@ -1,18 +1,35 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.ideafactorybd.nubstudentportal.StudentPortalFragment">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:ads="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context="com.ideafactorybd.nubstudentportal.StudentPortalFragment">
 
-    <WebView
-        android:id="@+id/webview_student_portal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+  <WebView
+    android:id="@+id/webview_student_portal"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    ads:layout_constraintBottom_toTopOf="@id/adView"
+    ads:layout_constraintEnd_toEndOf="parent"
+    ads:layout_constraintStart_toStartOf="parent"
+    ads:layout_constraintTop_toTopOf="parent" />
 
-    <ProgressBar
-        android:layout_gravity="center"
-        android:id="@+id/pb_load_student_portal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+  <com.google.android.gms.ads.AdView
+    android:id="@+id/adView"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    ads:adSize="SMART_BANNER"
+    ads:adUnitId="@string/ad_unit_nub"
+    ads:layout_constraintBottom_toBottomOf="parent"
+    ads:layout_constraintEnd_toEndOf="parent"
+    ads:layout_constraintStart_toStartOf="parent" />
 
-</FrameLayout>
+  <ProgressBar
+    android:id="@+id/pb_load_student_portal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    ads:layout_constraintBottom_toBottomOf="parent"
+    ads:layout_constraintEnd_toEndOf="parent"
+    ads:layout_constraintStart_toStartOf="parent"
+    ads:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

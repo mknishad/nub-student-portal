@@ -14,12 +14,16 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 
 public class StudentPortalFragment extends Fragment {
 
     View view;
     static WebView studentPortalWebview;
     ProgressBar pbLoadStudentPortal;
+    AdView mAdView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -45,6 +49,35 @@ public class StudentPortalFragment extends Fragment {
         webSettings.setBuiltInZoomControls(true);
         webSettings.setDisplayZoomControls(false);
         studentPortalWebview.setWebViewClient(new MyWebViewClient());
+
+        mAdView = (AdView) view.findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder()
+            .build();
+        mAdView.loadAd(adRequest);
+    }
+
+    @Override
+    public void onPause() {
+        if (mAdView != null) {
+            mAdView.pause();
+        }
+        super.onPause();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (mAdView != null) {
+            mAdView.resume();
+        }
+    }
+
+    @Override
+    public void onDestroy() {
+        if (mAdView != null) {
+            mAdView.destroy();
+        }
+        super.onDestroy();
     }
 
     private class MyWebViewClient extends WebViewClient {
