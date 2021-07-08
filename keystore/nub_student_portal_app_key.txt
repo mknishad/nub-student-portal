@@ -1,0 +1,3 @@
+alias: nub_student_portal_alias
+name: Nash Dev
+password: ojtibe.libo
