@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="nub-student-portal/app" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/nub-student-portal.iml" filepath="$PROJECT_DIR$/.idea/modules/nub-student-portal.iml" group="nub-student-portal" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/nub-student-portal.iml" filepath="$PROJECT_DIR$/.idea/modules/nub-student-portal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/nub-student-portal.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/nub-student-portal.app.iml" />
     </modules>
   </component>
 </project>

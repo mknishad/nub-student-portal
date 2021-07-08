@@ -3,8 +3,6 @@ package com.ideafactorybd.nubstudentportal;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,12 +12,23 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
 
 public class NUBWebsiteFragment extends Fragment {
 
-  View view;
   static WebView nubWebsiteWebview;
+  View view;
   ProgressBar pbLoadNUBWebsite;
+
+  public static boolean canGoBack() {
+    return nubWebsiteWebview.canGoBack();
+  }
+
+  public static void goBack() {
+    nubWebsiteWebview.goBack();
+  }
 
   @Override
   public void onCreate(Bundle savedInstanceState) {
@@ -67,13 +76,5 @@ public class NUBWebsiteFragment extends Fragment {
     public void onPageFinished(WebView view, String url) {
       pbLoadNUBWebsite.setVisibility(View.INVISIBLE);
     }
-  }
-
-  public static boolean canGoBack() {
-    return nubWebsiteWebview.canGoBack();
-  }
-
-  public static void goBack() {
-    nubWebsiteWebview.goBack();
   }
 }

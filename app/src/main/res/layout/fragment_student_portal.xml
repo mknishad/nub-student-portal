@@ -1,4 +1,4 @@
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:ads="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
@@ -9,20 +9,10 @@
     android:id="@+id/webview_student_portal"
     android:layout_width="0dp"
     android:layout_height="0dp"
-    ads:layout_constraintBottom_toTopOf="@id/adView"
+    ads:layout_constraintBottom_toBottomOf="parent"
     ads:layout_constraintEnd_toEndOf="parent"
     ads:layout_constraintStart_toStartOf="parent"
     ads:layout_constraintTop_toTopOf="parent" />
-
-  <com.google.android.gms.ads.AdView
-    android:id="@+id/adView"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    ads:adSize="SMART_BANNER"
-    ads:adUnitId="@string/ad_unit_nub"
-    ads:layout_constraintBottom_toBottomOf="parent"
-    ads:layout_constraintEnd_toEndOf="parent"
-    ads:layout_constraintStart_toStartOf="parent" />
 
   <ProgressBar
     android:id="@+id/pb_load_student_portal"
@@ -32,4 +22,4 @@
     ads:layout_constraintEnd_toEndOf="parent"
     ads:layout_constraintStart_toStartOf="parent"
     ads:layout_constraintTop_toTopOf="parent" />
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
