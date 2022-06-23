@@ -4,7 +4,16 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1175" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.17685185185185184" />
+        <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.17685185185185184" />
+        <entry key="app/src/main/res/layout/content_main.xml" value="0.17685185185185184" />
+        <entry key="app/src/main/res/layout/fragment_about.xml" value="0.17685185185185184" />
         <entry key="app/src/main/res/layout/fragment_help.xml" value="0.17685185185185184" />
+        <entry key="app/src/main/res/layout/fragment_nubwebsite.xml" value="0.17685185185185184" />
+        <entry key="app/src/main/res/layout/fragment_student_portal.xml" value="0.17685185185185184" />
+        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.17685185185185184" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1175" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1175" />
       </map>
     </option>
   </component>

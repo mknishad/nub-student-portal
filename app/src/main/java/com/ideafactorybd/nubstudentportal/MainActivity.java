@@ -10,6 +10,9 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity
@@ -44,6 +47,12 @@ public class MainActivity extends AppCompatActivity
     setTitle("Student Portal");
 
     Toast.makeText(this, "Please go to Help section to know about login info", Toast.LENGTH_LONG).show();
+
+    // Admob
+    MobileAds.initialize(this);
+    AdView mAdView = findViewById(R.id.adView);
+    AdRequest adRequest = new AdRequest.Builder().build();
+    mAdView.loadAd(adRequest);
   }
 
   @Override
