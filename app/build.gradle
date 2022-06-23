@@ -5,8 +5,7 @@ def keystoreProperties = new Properties()
 keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 
 android {
-  compileSdkVersion 30
-  buildToolsVersion "30.0.3"
+  compileSdkVersion 32
   signingConfigs {
     release {
       keyAlias keystoreProperties['keyAlias']
@@ -17,8 +16,8 @@ android {
   }
   defaultConfig {
     applicationId "com.ideafactorybd.nubstudentportal"
-    minSdkVersion 16
-    targetSdkVersion 30
+    minSdkVersion 21
+    targetSdkVersion 32
     versionCode 3
     versionName "1.1.3"
     testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
@@ -37,9 +36,9 @@ dependencies {
   androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
     exclude group: 'com.android.support', module: 'support-annotations'
   })
-  implementation 'androidx.appcompat:appcompat:1.3.0'
-  implementation 'com.google.android.material:material:1.4.0'
-  implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+  implementation 'androidx.appcompat:appcompat:1.4.2'
+  implementation 'com.google.android.material:material:1.6.1'
+  implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
   implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-  testImplementation 'junit:junit:4.13.1'
+  testImplementation 'junit:junit:4.13.2'
 }
