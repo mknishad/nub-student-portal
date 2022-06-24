@@ -12,6 +12,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
@@ -55,6 +56,20 @@ public class StudentPortalFragment extends Fragment {
     studentPortalWebview.setWebViewClient(new MyWebViewClient());
   }
 
+  @Override
+  public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    super.onViewCreated(view, savedInstanceState);
+
+    studentPortalWebview = view.findViewById(R.id.webview_student_portal);
+    pbLoadStudentPortal = view.findViewById(R.id.pb_load_student_portal);
+    WebSettings webSettings = studentPortalWebview.getSettings();
+    studentPortalWebview.loadUrl("http://182.160.97.196:8088/studentportal/");
+    webSettings.setJavaScriptEnabled(true);
+    webSettings.setBuiltInZoomControls(true);
+    webSettings.setDisplayZoomControls(false);
+    studentPortalWebview.setWebViewClient(new MyWebViewClient());
+  }
+
   private class MyWebViewClient extends WebViewClient {
     @Override
     public boolean shouldOverrideUrlLoading(WebView view, String url) {
@@ -71,7 +86,7 @@ public class StudentPortalFragment extends Fragment {
 
     @Override
     public void onPageFinished(WebView view, String url) {
-      pbLoadStudentPortal.setVisibility(View.INVISIBLE);
+      pbLoadStudentPortal.setVisibility(View.GONE);
     }
   }
 }

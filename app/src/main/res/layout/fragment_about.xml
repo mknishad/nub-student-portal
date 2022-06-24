@@ -1,40 +1,56 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
 
-  <LinearLayout
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_horizontal"
+          android:layout_marginTop="@dimen/activity_vertical_margin"
+          android:src="@drawable/ic_nub" />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:padding="@dimen/activity_horizontal_margin"
+          android:text="NUB Student Portal"
+          android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:padding="@dimen/activity_horizontal_margin"
+          android:text="Version: 1.1.4"
+          android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="@dimen/activity_vertical_margin"
+          android:padding="@dimen/activity_horizontal_margin"
+          android:text="Developed by: Idea Factory Ltd."
+          android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+    </LinearLayout>
+  </ScrollView>
+
+  <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+      android:id="@+id/adView"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:gravity="center_horizontal"
-      android:orientation="vertical">
-
-    <ImageView
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:src="@drawable/ic_nub" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/activity_horizontal_margin"
-        android:text="NUB Student Portal"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/activity_horizontal_margin"
-        android:text="Version: 1.1.4"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
-
-    <TextView
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:padding="@dimen/activity_horizontal_margin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Developed by: Idea Factory Ltd."
-        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
-  </LinearLayout>
-</ScrollView>
+      android:layout_gravity="center"
+      ads:adSize="BANNER"
+      ads:adUnitId="ca-app-pub-3318512953586134/1173598172" />
+</LinearLayout>
