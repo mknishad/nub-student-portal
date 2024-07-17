@@ -5,7 +5,7 @@ def keystoreProperties = new Properties()
 keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 
 android {
-  compileSdk 33
+  compileSdk 34
   signingConfigs {
     release {
       keyAlias keystoreProperties['keyAlias']
@@ -17,7 +17,7 @@ android {
   defaultConfig {
     applicationId "com.ideafactorybd.nubstudentportal"
     minSdk 21
-    targetSdk 33
+    targetSdk 34
     versionCode 7
     versionName "1.1.7"
     testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
