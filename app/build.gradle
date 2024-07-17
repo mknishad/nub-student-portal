@@ -18,8 +18,8 @@ android {
     applicationId "com.ideafactorybd.nubstudentportal"
     minSdk 21
     targetSdk 34
-    versionCode 7
-    versionName "1.1.7"
+    versionCode 8
+    versionName "1.1.8"
     testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     signingConfig signingConfigs.release
   }
@@ -34,9 +34,6 @@ android {
 
 dependencies {
   implementation fileTree(dir: 'libs', include: ['*.jar'])
-  /*androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
-    exclude group: 'com.android.support', module: 'support-annotations'
-  })*/
   implementation 'androidx.appcompat:appcompat:1.7.0'
   implementation 'com.google.android.material:material:1.12.0'
   implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
