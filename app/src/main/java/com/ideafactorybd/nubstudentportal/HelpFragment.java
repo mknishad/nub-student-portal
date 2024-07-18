@@ -9,10 +9,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
-
 
 public class HelpFragment extends Fragment {
 
@@ -28,10 +24,10 @@ public class HelpFragment extends Fragment {
     View view = inflater.inflate(R.layout.fragment_help, container, false);
 
     // Admob
-    MobileAds.initialize(requireContext());
+    /*MobileAds.initialize(requireContext());
     AdView mAdView = view.findViewById(R.id.adView);
     AdRequest adRequest = new AdRequest.Builder().build();
-    mAdView.loadAd(adRequest);
+    mAdView.loadAd(adRequest);*/
 
     return view;
   }

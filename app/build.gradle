@@ -14,12 +14,12 @@ android {
       storePassword keystoreProperties['storePassword']
     }
   }
-  defaultConfig {
+  defaultConfig { q
     applicationId "com.ideafactorybd.nubstudentportal"
     minSdk 21
     targetSdk 34
-    versionCode 8
-    versionName "1.1.8"
+    versionCode 9
+    versionName "1.1.9"
     testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     signingConfig signingConfigs.release
   }
@@ -39,5 +39,5 @@ dependencies {
   implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
   implementation 'androidx.legacy:legacy-support-v4:1.0.0'
   testImplementation 'junit:junit:4.13.2'
-  implementation 'com.google.android.gms:play-services-ads:23.2.0'
+  //implementation 'com.google.android.gms:play-services-ads:23.2.0'
 }

@@ -1,5 +1,6 @@
 package com.ideafactorybd.nubstudentportal;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -11,6 +12,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity
     implements NavigationView.OnNavigationItemSelectedListener {
@@ -43,7 +45,13 @@ public class MainActivity extends AppCompatActivity
     getSupportFragmentManager().beginTransaction().replace(R.id.main_content, studentPortalFragment, studentPortalFragment.getTag()).commit();
     setTitle("Student Portal");
 
-    Toast.makeText(this, "Please go to Help section to know about login info", Toast.LENGTH_LONG).show();
+    Snackbar snackbar = Snackbar.make(
+        findViewById(R.id.main_content),
+        "Please go to Help section to know about login info",
+        Snackbar.LENGTH_INDEFINITE
+    ).setAction("OK", v -> {});
+    snackbar.setActionTextColor(Color.WHITE);
+    snackbar.show();
   }
 
   @Override
